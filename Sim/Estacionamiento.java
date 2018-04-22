@@ -41,12 +41,12 @@ public class Estacionamiento {
 	public void mostrarE() {
 		System.out.println("ESTACIONAMIENTO");
 		for(int i=0;i<this.parking.size();i++) {
-			System.out.print("\nLote N°"+(1+i)+": ");			
+			System.out.print("\nLote NÂ°"+(1+i)+": ");			
 			this.parking.get(i).mostrar();
 		}
 	}
 	
-	public ArrayList<Lote> crear(int a){
+	private ArrayList<Lote> crear(int a){
 		ArrayList<Lote> m = new ArrayList<Lote>();
 		for(int i=0;i<a;i++) {
 			m.add(new Lote());
