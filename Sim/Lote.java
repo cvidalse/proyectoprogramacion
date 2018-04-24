@@ -7,12 +7,14 @@ public class Lote {
 		this.disponibilidad = getDisponibilidad();	
 	}
 	
-	private double signal() { //simulador se�al/cambiar por timer/
+	private double signal() {
+		// simula una señal
 		double segnal = Math.random();
 		return segnal;
 	}
 	
 	private boolean estadoLote() {
+		// de acuerdo a la "intensidad" de la señal emitida retorna verdadero o falso
 		double a = signal();
 		if(a<0.5) {
 			return true;	 	
