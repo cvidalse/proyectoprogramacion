@@ -1,0 +1,13 @@
+Clases
+SmartParking:Sin atibutos:Main
+
+Clase conexionArduino; -puerto:String; +listener:SerialPortEventListener
+ SerialEvent tipo public, void
+importacion de la libreria PanamaHitek_Arduino
+metodos usados ph.arduinoRx(); void
+               ph.isMessageAvailabe();boolean
+               ph.receiveData();
+
+
+
+
