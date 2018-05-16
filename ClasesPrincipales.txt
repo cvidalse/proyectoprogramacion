@@ -1,3 +1,7 @@
+Cristian Documentacion 
+Marcelo UML
+Sebastian GUIS 
+
 Clases
 SmartParking:Sin atibutos:Main
 
@@ -8,6 +12,33 @@ metodos usados ph.arduinoRx(); void
                ph.isMessageAvailabe();boolean
                ph.receiveData();
 
+clase Lote 
+atributo -estado:boolean
+metodo 
+getEstado:boolean
++setEstado(entrada int):void
+
+clase estaciomamiento
+Sin atributos
+Metodos
++getColor(estado:boolean)
+-actualizarEstado(int pos, int valorConexion)
 
 
+relaciones
+lote---------<n>Estacionaiento composicion
+conexionArduino-----<>Estacionamiento agregacion
+
+
+ventana pendiente proxima materia;
+
+
+
+
+Guis 
+Mapa de navegacion 
+ventana 1 mostrar---> ventana2
+ventana 1 Salir ----> termina la ejecucion 
+ventana 2 actualizar -------> otro paquete 
+ventana 2 volver -------> ventana 1
 
