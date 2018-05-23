@@ -21,7 +21,7 @@ public class Principal extends JFrame implements ActionListener{
     }
     
     private void configuracionVentana() {
-        this.setTitle("Smart Parking Patreon build :'v");               
+        this.setTitle("Smart Parking");               
         this.setSize(510, 310);                               
         this.setLocationRelativeTo(null);                     
         this.setLayout(null);                                
