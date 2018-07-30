@@ -32,8 +32,12 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
 	private JPanel panel_19;
 	private JPanel panel_20;
 	private JPanel panel_21;
-    private Container contenido;
+	private JPanel disponible;
+	private JPanel ocupado;
+        private Container contenido;
 	private Lote testing;
+	private JLabel lblOcupado;
+	private JLabel lblDisponible;
 	
 	public GuiEstacionamiento() {
 		super();
@@ -49,13 +53,12 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
 	
     private void configuracionVentana() {     
         this.setTitle("Smart Parking - Estacionamiento");   
-		this.setBounds(100, 100, 789, 492);     
+		this.setBounds(100, 100, 789, 625); 
 		this.setIconImage(Toolkit.getDefaultToolkit().getImage(test.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif")));
         this.setLocationRelativeTo(null);                     
         this.setLayout(null);                                
         this.setResizable(false);          
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);    
-        this.setUndecorated(true);
     }
     
     private void inicioComponentes() {
@@ -66,7 +69,15 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
 		texto.setFont(new Font("Perpetua", Font.BOLD | Font.ITALIC, 40));
 		texto.setBounds(290, 0, 238, 57);		
 		actualizar = new JButton("Actualizar");
-		actualizar.setBounds(342, 444, 97, 25);
+		actualizar.setBounds(342, 456, 97, 48);
+		lblOcupado = new JLabel("Ocupado");
+		lblOcupado.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblOcupado.setBounds(181, 517, 96, 40);
+		lblDisponible = new JLabel("Disponible");
+		lblDisponible.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblDisponible.setBounds(515, 517, 96, 40);
+		this.add(lblDisponible);
+		this.add(lblOcupado);
         this.add(volver);
         this.add(texto);
         this.add(actualizar);
@@ -177,6 +188,18 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
     	panel_21.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
     	panel_21.setBounds(667, 193, 96, 110);
     	this.add(panel_21);
+    	
+    	ocupado = new JPanel();
+    	ocupado.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+    	ocupado.setBackground(SystemColor.activeCaptionBorder);
+    	ocupado.setBounds(608, 517, 47, 40);
+    	this.add(ocupado);
+    	
+    	disponible = new JPanel();
+    	disponible.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+    	disponible.setBackground(SystemColor.textHighlight);
+    	disponible.setBounds(127, 517, 47, 40);
+    	this.add(disponible);    	
     	
     }
     
