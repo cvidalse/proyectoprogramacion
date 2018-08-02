@@ -40,21 +40,21 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
 	private JLabel lblDisponible;
 	
 	public GuiEstacionamiento() {
-		super();
-		configuracionVentana();
-		inicioComponentes();
-		configPaneles();
-		this.testing = new Lote();
+	super();
+	configuracionVentana();
+	inicioComponentes();
+	configPaneles();
+	this.testing = new Lote();
     	this.contenido = this.getContentPane();
     	this.contenido.setBackground(SystemColor.inactiveCaptionBorder);
-		accionBoton();
-		this.setVisible(true);
+	accionBoton();
+	this.setVisible(true);
 	}
 	
     private void configuracionVentana() {     
         this.setTitle("Smart Parking - Estacionamiento");   
-		this.setBounds(100, 100, 789, 625); 
-		this.setIconImage(Toolkit.getDefaultToolkit().getImage((GuiEstacionamiento.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif")));
+	this.setBounds(100, 100, 789, 625); 
+	this.setIconImage(Toolkit.getDefaultToolkit().getImage(GuiEstacionamiento.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif")));
         this.setLocationRelativeTo(null);                     
         this.setLayout(null);                                
         this.setResizable(false);          
@@ -62,22 +62,22 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
     }
     
     private void inicioComponentes() {
-		volver = new JButton("Volver");
-		volver.setIcon(new ImageIcon(GuiEstacionamiento.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
-		volver.setBounds(12, 13, 105, 29);
-		texto = new JLabel("Smart Parking");
-		texto.setFont(new Font("Perpetua", Font.BOLD | Font.ITALIC, 40));
-		texto.setBounds(290, 0, 238, 57);		
-		actualizar = new JButton("Actualizar");
-		actualizar.setBounds(342, 456, 97, 48);
-		lblOcupado = new JLabel("Ocupado");
-		lblOcupado.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblOcupado.setBounds(181, 517, 96, 40);
-		lblDisponible = new JLabel("Disponible");
-		lblDisponible.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lblDisponible.setBounds(515, 517, 96, 40);
-		this.add(lblDisponible);
-		this.add(lblOcupado);
+	volver = new JButton("Volver");
+	volver.setIcon(new ImageIcon(GuiEstacionamiento.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
+	volver.setBounds(12, 13, 105, 29);
+	texto = new JLabel("Smart Parking");
+	texto.setFont(new Font("Perpetua", Font.BOLD | Font.ITALIC, 40));
+	texto.setBounds(290, 0, 238, 57);		
+	actualizar = new JButton("Actualizar");
+	actualizar.setBounds(342, 456, 97, 48);
+	lblOcupado = new JLabel("Ocupado");
+	lblOcupado.setFont(new Font("Tahoma", Font.BOLD, 16));
+	lblOcupado.setBounds(181, 517, 96, 40);
+	lblDisponible = new JLabel("Disponible");
+	lblDisponible.setFont(new Font("Tahoma", Font.BOLD, 16));
+	lblDisponible.setBounds(515, 517, 96, 40);
+	this.add(lblDisponible);
+	this.add(lblOcupado);
         this.add(volver);
         this.add(texto);
         this.add(actualizar);
@@ -206,38 +206,51 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
     private void accionBoton() {
         volver.addActionListener(this);
         actualizar.addActionListener(new ActionListener(){
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				testing.setColor(panel_1);
-				testing.setColor(panel_2);
-				testing.setColor(panel_3);
-				testing.setColor(panel_4);
-				testing.setColor(panel_5);
-				testing.setColor(panel_6);
-				testing.setColor(panel_7);
-				testing.setColor(panel_8);
-				testing.setColor(panel_9);
-				testing.setColor(panel_10);
-				testing.setColor(panel_11);
-				testing.setColor(panel_12);
-				testing.setColor(panel_13);
-				testing.setColor(panel_14);
-				testing.setColor(panel_15);
-				testing.setColor(panel_16);
-				testing.setColor(panel_17);
-				testing.setColor(panel_18);
-				testing.setColor(panel_19);
-				testing.setColor(panel_20);
-				testing.setColor(panel_21);	
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+		testing.setColor(panel_1);
+		testing.setColor(panel_2);
+		testing.setColor(panel_3);
+		testing.setColor(panel_4);
+		testing.setColor(panel_5);
+		testing.setColor(panel_6);
+		testing.setColor(panel_7);
+		testing.setColor(panel_8);
+		testing.setColor(panel_9);
+		testing.setColor(panel_10);
+		testing.setColor(panel_11);
+		testing.setColor(panel_12);
+		testing.setColor(panel_13);
+		testing.setColor(panel_14);
+		testing.setColor(panel_15);
+		testing.setColor(panel_16);
+		testing.setColor(panel_17);
+		testing.setColor(panel_18);
+		testing.setColor(panel_19);
+		testing.setColor(panel_20);
+		testing.setColor(panel_21);	
 			}
         });    	
+       this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent windowEvent) {
+				JOptionPane.showMessageDialog(contenido,
+					    "Para cerrar el programa debe hacerlo desde la ventana anterior.",
+					    "Información",
+					    JOptionPane.INFORMATION_MESSAGE);		
+			}
+        });   
+    }
+			  
+    private void cambioVentana(){
+	    @SuppressWarnings("unused")
+	    GuiPrincipal menu = new GuiPrincipal();
+	    this.dispose();
     }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		@SuppressWarnings("unused")
-		GuiPrincipal menu = new GuiPrincipal();
-		this.dispose();
-	}
+    @Override
+    public void actionPerformed(ActionEvent e) {
+		cambioVentana();
+    }
 
-}
+    }
