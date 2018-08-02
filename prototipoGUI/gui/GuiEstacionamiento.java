@@ -54,7 +54,7 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
     private void configuracionVentana() {     
         this.setTitle("Smart Parking - Estacionamiento");   
 		this.setBounds(100, 100, 789, 625); 
-		this.setIconImage(Toolkit.getDefaultToolkit().getImage(test.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif")));
+		this.setIconImage(Toolkit.getDefaultToolkit().getImage((GuiEstacionamiento.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif")));
         this.setLocationRelativeTo(null);                     
         this.setLayout(null);                                
         this.setResizable(false);          
@@ -63,7 +63,7 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
     
     private void inicioComponentes() {
 		volver = new JButton("Volver");
-		volver.setIcon(new ImageIcon(test.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
+		volver.setIcon(new ImageIcon(GuiEstacionamiento.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
 		volver.setBounds(12, 13, 105, 29);
 		texto = new JLabel("Smart Parking");
 		texto.setFont(new Font("Perpetua", Font.BOLD | Font.ITALIC, 40));
