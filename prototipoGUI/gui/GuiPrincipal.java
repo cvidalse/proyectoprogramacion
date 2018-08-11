@@ -5,7 +5,6 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.*;
@@ -16,11 +15,14 @@ public class GuiPrincipal extends JFrame implements ActionListener {
 	private JLabel version;
 	private JButton contacto;
         private Container contenido;
+	private URL rutaImagen;
+	private BufferedImage spImagen;
 	
 	GuiPrincipal(){
 	super();
 	configuracionVentana();
 	inicioComponentes();
+	agregarImagen();
 	accionBoton();
     	this.contenido = this.getContentPane();
     	this.contenido.setBackground(SystemColor.inactiveCaptionBorder);
@@ -47,12 +49,6 @@ public class GuiPrincipal extends JFrame implements ActionListener {
 	imagen = new JLabel();
 	imagen.setBounds(273, 48, 252, 252);
 	imagen.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		try {
-			imageUrl(imagen);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	version = new JLabel("v0.7");
 	version.setFont(new Font("Consolas", Font.ITALIC, 13));
 	version.setBounds(748, 3, 29, 16);
@@ -61,11 +57,17 @@ public class GuiPrincipal extends JFrame implements ActionListener {
         this.add(imagen);
         this.add(version);
     }
-    
-    private void imageUrl(JLabel miLabel) throws IOException {
-    	 URL url = new URL("https://raw.githubusercontent.com/cvidalse/proyectoprogramacion/master/prototipoGUI/gui/icon/testing.jpg");
-    	 BufferedImage image = ImageIO.read(url);
-    	 miLabel.setIcon(new ImageIcon(image));	
+	
+    private void agregarImagen(){
+	    	try {
+			rutaImagen = new URL("https://raw.githubusercontent.com/cvidalse/proyectoprogramacion/master/prototipoGUI/gui/icon/testisng.jpg");
+			miImagen = ImageIO.read(rutaImagen);
+			imagen.setIcon(new ImageIcon(miImagen));
+	                this.add(imagen);
+		} catch (IOException e) {
+			imagen.setText("Imagen no disponible");
+	      	        this.add(imagen);
+		}
     }
     
     private void accionBoton() {
