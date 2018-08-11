@@ -60,7 +60,7 @@ public class GuiPrincipal extends JFrame implements ActionListener {
 	
     private void agregarImagen(){
 	    	try {
-			rutaImagen = new URL("https://raw.githubusercontent.com/cvidalse/proyectoprogramacion/master/prototipoGUI/gui/icon/testisng.jpg");
+			rutaImagen = new URL("https://raw.githubusercontent.com/cvidalse/proyectoprogramacion/master/prototipoGUI/gui/icon/testing.jpg");
 			spImagen = ImageIO.read(rutaImagen);
 			imagen.setIcon(new ImageIcon(spImagen));
 	                this.add(imagen);
