@@ -61,8 +61,8 @@ public class GuiPrincipal extends JFrame implements ActionListener {
     private void agregarImagen(){
 	    	try {
 			rutaImagen = new URL("https://raw.githubusercontent.com/cvidalse/proyectoprogramacion/master/prototipoGUI/gui/icon/testisng.jpg");
-			miImagen = ImageIO.read(rutaImagen);
-			imagen.setIcon(new ImageIcon(miImagen));
+			spImagen = ImageIO.read(rutaImagen);
+			imagen.setIcon(new ImageIcon(spImagen));
 	                this.add(imagen);
 		} catch (IOException e) {
 			imagen.setText("Imagen no disponible");
