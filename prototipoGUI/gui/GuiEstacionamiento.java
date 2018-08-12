@@ -2,87 +2,192 @@ package gui;
 
 import javax.swing.*;
 import javax.swing.border.*;
-import testing.Lote;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * Esta es la ventana secundaria del proyecto
+ * En esta ventana se muestra el estacionamiento y el estado
+ * de cada lote
+ * @author SRobles97
+ */
 @SuppressWarnings("serial")
 public class GuiEstacionamiento extends JFrame implements ActionListener {
+	/**
+	 * Este JButton llama al metodo cambioVentana();
+	 */
 	private JButton volver;
+	/**
+	 * Este JLabel muestra un texto
+	 */
 	private JLabel texto;
+	/**
+	 * Este JButton actualiza el estado de los lotes
+	 */
 	private JButton actualizar;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_1;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_2;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_3;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_4;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_5;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_6;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_7;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_8;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_9;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_10;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_11;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_12;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_13;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_14;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_15;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_16;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_17;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_18;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_19;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_20;
+	/**
+	 * Representa el espacio de un estacionamiento
+	 */
 	private JPanel panel_21;
+	/**
+	 * Este JPanel sirve de leyenda para mostrar al usuario el color
+	 * de un lote con el estado Disponible
+	 */
 	private JPanel disponible;
+	/**
+	 * Este JPanel sirve de leyenda para mostrar al usuario el color
+	 * de un lote con el estado Ocupado
+	 */
 	private JPanel ocupado;
-        private Container contenido;
-	private Lote testing;
+    /**
+     * Este Container se utiliza solo para cambiar el color de fondo
+     */
+    private Container contenido;
+	/**
+	 * Este JLabel muestra un texto
+	 */
 	private JLabel lblOcupado;
+	/**
+	 * Este JLabel muestra un texto
+	 */
 	private JLabel lblDisponible;
 	
+	/**
+	 * Constructor de la clase
+	 * Aqui se llama a otros metodos y se hace visible el JFrame
+	 */
 	public GuiEstacionamiento() {
 	super();
 	configuracionVentana();
 	inicioComponentes();
 	configPaneles();
-	this.testing = new Lote();
-    	this.contenido = this.getContentPane();
-    	this.contenido.setBackground(SystemColor.inactiveCaptionBorder);
+    this.contenido = this.getContentPane();
+    this.contenido.setBackground(SystemColor.inactiveCaptionBorder);
 	accionBoton();
 	this.setVisible(true);
 	}
 	
+    /**
+     * Este metodo configura el tamaño,titulo,layout y otros aspectos de la ventana
+     */
     private void configuracionVentana() {     
-        this.setTitle("Smart Parking - Estacionamiento");   
-	this.setBounds(100, 100, 789, 625); 
-	this.setIconImage(Toolkit.getDefaultToolkit().getImage(GuiEstacionamiento.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif")));
-        this.setLocationRelativeTo(null);                     
-        this.setLayout(null);                                
-        this.setResizable(false);          
-        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);    
+     this.setTitle("Smart Parking - Estacionamiento");   
+	 this.setBounds(100, 100, 789, 625); 
+	 this.setIconImage(Toolkit.getDefaultToolkit().getImage(GuiEstacionamiento.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif")));
+     this.setLocationRelativeTo(null);                     
+     this.setLayout(null);                                
+     this.setResizable(false);          
+     this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);    
     }
     
+    /**
+     * En este metodo se instancias las variables y se agregan al JFrame
+     */
     private void inicioComponentes() {
-	volver = new JButton("Volver");
-	volver.setIcon(new ImageIcon(GuiEstacionamiento.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
-	volver.setBounds(12, 13, 105, 29);
-	texto = new JLabel("Smart Parking");
-	texto.setFont(new Font("Perpetua", Font.BOLD | Font.ITALIC, 40));
-	texto.setBounds(290, 0, 238, 57);		
-	actualizar = new JButton("Actualizar");
-	actualizar.setBounds(342, 456, 97, 48);
-	lblOcupado = new JLabel("Ocupado");
-	lblOcupado.setFont(new Font("Tahoma", Font.BOLD, 16));
-	lblOcupado.setBounds(181, 517, 96, 40);
-	lblDisponible = new JLabel("Disponible");
-	lblDisponible.setFont(new Font("Tahoma", Font.BOLD, 16));
-	lblDisponible.setBounds(515, 517, 96, 40);
-	this.add(lblDisponible);
-	this.add(lblOcupado);
-        this.add(volver);
-        this.add(texto);
-        this.add(actualizar);
+	 volver = new JButton("Volver");
+	 volver.setIcon(new ImageIcon(GuiEstacionamiento.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-backspace-button.png")));
+	 volver.setBounds(12, 13, 105, 29);
+	 texto = new JLabel("Smart Parking");
+	 texto.setFont(new Font("Perpetua", Font.BOLD | Font.ITALIC, 40));
+	 texto.setBounds(290, 0, 238, 57);		
+	 actualizar.setBounds(342, 456, 97, 48);
+	 lblOcupado = new JLabel("Ocupado");
+	 lblOcupado.setFont(new Font("Tahoma", Font.BOLD, 16));
+	 lblOcupado.setBounds(181, 517, 96, 40);
+	 lblDisponible = new JLabel("Disponible");
+	 lblDisponible.setFont(new Font("Tahoma", Font.BOLD, 16));
+	 lblDisponible.setBounds(515, 517, 96, 40);
+	 this.add(lblDisponible);
+	 this.add(lblOcupado);
+     this.add(volver);
+     this.add(texto);
+     this.add(actualizar);
     }
     
+    /**
+     * Este metodo configura el tamaño,ubicación y el borde de los paneles
+     * ademas de agregarlos al JFrame
+     */
     private void configPaneles() {
     	panel_1 = new JPanel();
     	panel_1.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
@@ -203,32 +308,15 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
     	
     }
     
+    /**
+     * Este metodo configura las acciones de los botones del JFrame
+     */
     private void accionBoton() {
         volver.addActionListener(this);
         actualizar.addActionListener(new ActionListener(){
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-		testing.setColor(panel_1);
-		testing.setColor(panel_2);
-		testing.setColor(panel_3);
-		testing.setColor(panel_4);
-		testing.setColor(panel_5);
-		testing.setColor(panel_6);
-		testing.setColor(panel_7);
-		testing.setColor(panel_8);
-		testing.setColor(panel_9);
-		testing.setColor(panel_10);
-		testing.setColor(panel_11);
-		testing.setColor(panel_12);
-		testing.setColor(panel_13);
-		testing.setColor(panel_14);
-		testing.setColor(panel_15);
-		testing.setColor(panel_16);
-		testing.setColor(panel_17);
-		testing.setColor(panel_18);
-		testing.setColor(panel_19);
-		testing.setColor(panel_20);
-		testing.setColor(panel_21);	
+
 			}
         });    	
        this.addWindowListener(new WindowAdapter() {
@@ -242,6 +330,10 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
         });   
     }
 			  
+    /**
+     * Este metodo se llama a traves de un boton y su funcion es cerrar la ventana
+     * actual y llamar a la otra
+     */
     private void cambioVentana(){
 	    @SuppressWarnings("unused")
 	    GuiPrincipal menu = new GuiPrincipal();
