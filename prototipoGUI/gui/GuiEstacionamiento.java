@@ -96,110 +96,110 @@ public class GuiEstacionamiento extends JFrame implements ActionListener {
     	
     	panel_3 = new JPanel();
     	panel_3.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_3.setBounds(19, 321, 96, 110);
+    	panel_3.setBounds(235, 70, 96, 110);
     	this.add(panel_3);
     	
     	panel_4 = new JPanel();
     	panel_4.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_4.setBounds(127, 321, 96, 110);
+    	panel_4.setBounds(343, 70, 96, 110); 
     	this.add(panel_4);   	
     	
     	panel_5 = new JPanel();
     	panel_5.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_5.setBounds(235, 70, 96, 110);
+    	panel_5.setBounds(451, 70, 96, 110);
     	this.add(panel_5);
     	
     	panel_6 = new JPanel();
     	panel_6.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_6.setBounds(235, 321, 96, 110);
+    	panel_6.setBounds(559, 70, 96, 110);
     	this.add(panel_6);   
     	
     	panel_7 = new JPanel();
     	panel_7.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_7.setBounds(343, 70, 96, 110);
+    	panel_7.setBounds(667, 70, 96, 110);
     	this.add(panel_7);
     	
     	panel_8 = new JPanel();
     	panel_8.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_8.setBounds(451, 70, 96, 110);
+    	panel_8.setBounds(19, 193, 96, 110);
     	this.add(panel_8);
     	
     	panel_9 = new JPanel();
     	panel_9.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_9.setBounds(559, 70, 96, 110);
+    	panel_9.setBounds(127, 193, 96, 110);
     	this.add(panel_9);
     	
     	panel_10 = new JPanel();
     	panel_10.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_10.setBounds(667, 70, 96, 110);
+    	panel_10.setBounds(235, 193, 96, 110);
     	this.add(panel_10);
     	
     	panel_11 = new JPanel();
     	panel_11.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_11.setBounds(343, 321, 96, 110);
+    	panel_11.setBounds(343, 193, 96, 110);
     	this.add(panel_11);
     	
     	panel_12 = new JPanel();
     	panel_12.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_12.setBounds(451, 321, 96, 110);
+    	panel_12.setBounds(451, 193, 96, 110);
     	this.add(panel_12);
     	
     	panel_13 = new JPanel();
     	panel_13.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_13.setBounds(559, 321, 96, 110);
+    	panel_13.setBounds(559, 193, 96, 110);
     	this.add(panel_13);
     	
     	panel_14 = new JPanel();
     	panel_14.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_14.setBounds(667, 321, 96, 110);
+    	panel_14.setBounds(667, 193, 96, 110);
     	this.add(panel_14);
     	
     	panel_15 = new JPanel();
     	panel_15.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_15.setBounds(19, 193, 96, 110);
+    	panel_15.setBounds(19, 321, 96, 110); 
     	this.add(panel_15);   	
     	
     	panel_16 = new JPanel();
     	panel_16.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_16.setBounds(127, 193, 96, 110);
+    	panel_16.setBounds(127, 321, 96, 110);
     	this.add(panel_16);  	
     	
     	panel_17 = new JPanel();
     	panel_17.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_17.setBounds(235, 193, 96, 110);
+    	panel_17.setBounds(235, 321, 96, 110);
     	this.add(panel_17);  
     	
     	panel_18 = new JPanel();
     	panel_18.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_18.setBounds(343, 193, 96, 110);
+    	panel_18.setBounds(343, 321, 96, 110);
     	this.add(panel_18);  	
     	
     	panel_19 = new JPanel();
     	panel_19.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_19.setBounds(451, 193, 96, 110);
+    	panel_19.setBounds(451, 321, 96, 110);
     	this.add(panel_19);
     	
     	panel_20 = new JPanel();
     	panel_20.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_20.setBounds(559, 193, 96, 110);
+    	panel_20.setBounds(559, 321, 96, 110);
     	this.add(panel_20);
     	
     	panel_21 = new JPanel();
     	panel_21.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	panel_21.setBounds(667, 193, 96, 110);
+    	panel_21.setBounds(667, 321, 96, 110);
     	this.add(panel_21);
-    	
-    	ocupado = new JPanel();
-    	ocupado.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	ocupado.setBackground(SystemColor.activeCaptionBorder);
-    	ocupado.setBounds(608, 517, 47, 40);
-    	this.add(ocupado);
     	
     	disponible = new JPanel();
     	disponible.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-    	disponible.setBackground(SystemColor.textHighlight);
-    	disponible.setBounds(127, 517, 47, 40);
-    	this.add(disponible);    	
+    	disponible.setBackground(SystemColor.activeCaptionBorder);
+    	disponible.setBounds(608, 517, 47, 40);
+    	this.add(disponible);
+    	
+    	ocupado = new JPanel();
+    	ocupado.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+    	ocupado.setBackground(SystemColor.textHighlight);
+    	ocupado.setBounds(127, 517, 47, 40);
+    	this.add(ocupado);    	
     	
     }
     
